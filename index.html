@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Geoffrey M. Poore</title>
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<style>
+body {
+    text-align: center;
+    padding: 1rem;
+}
+#page {
+    display: block;
+    text-align: left;
+    max-width: 40rem;
+    margin: auto;
+}
+h1, h2 {
+    font-family: "IM Fell DW Pica";
+    font-weight: 400;
+    line-height: normal;
+}
+h1 {
+    font-size: 250%;
+}
+h2 {
+    font-size: 180%;
+}
+#menu-contact {
+    font-family: "IM Fell DW Pica";
+    font-size: 130%;
+    line-height: 1.4;
+}
+#menu-contact a {
+    text-decoration: none;
+    color: inherit;
+}
+main {
+    font-family: "Libre Baskerville";
+    line-height: 1.5;
+}
+code {
+    font-family: 'Inconsolata', monospace;
+    font-size: 115%;
+}
+u.dotted {
+    border-bottom: 1px dotted silver;
+    text-decoration: none;
+}
+label {
+    cursor: pointer;
+}
+.hide-show-checkbox {
+    display: none;
+}
+.hide-show-checkbox ~ * .hide {
+    display: initial;
+}
+.hide-show-checkbox:checked ~ * .hide {
+    display: none;
+}
+.hide-show-checkbox ~ .show,
+.hide-show-checkbox ~ * .show {
+    display: none;
+}
+.hide-show-checkbox:checked ~ .show,
+.hide-show-checkbox:checked ~ * .show {
+    display: initial;
+}
+ul.arrow {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 1.5em;
+    position: relative;
+}
+ul.arrow li:before {
+    content: "\27b5";
+    position: absolute;
+    vertical-align: center;
+}
+</style>
+</head>
+
+<body>
+<div id="page">
+<div id="header">
+<h1 id="name">Geoffrey M. Poore</h1>
+<p id="menu-contact">
+<a href="#programming">programming</a>
+&nbsp;&nbsp;&bullet;&nbsp;&nbsp;
+<a href="#typography">typography</a>
+&nbsp;&nbsp;&bullet;&nbsp;&nbsp;
+<a href="#physics">physics</a>
+<br/> gpoore @ gmail |
+<a href="https://github.com/gpoore/">github</a>
+</p>
+</div>
+
+<hr/>
+
+<main>
+<h2 id="programming">Programming</h2>
+<p>
+I create free and open-source software with scientific and technical
+applications.  One of my objectives is making it easier to write scientific
+and technical documents.  I like to include executable code in my documents,
+so that things like plots and tables can be generated automatically.
+Documents can write themselves&nbsp;&ndash; at least in part.  You may be
+familiar with this approach from software like
+<a href="http://jupyter.org/">Jupyter notebooks</a>,
+<a href="https://leisch.userweb.mwn.de/Sweave/">Sweave</a>,
+<a href="https://yihui.name/knitr/">knitr</a>, or
+<a href="https://orgmode.org/worg/org-contrib/babel/">Org-mode Babel</a>.  My
+own contribution is
+<a href="https://github.com/gpoore/pythontex">PythonTeX</a>, which focuses on
+superior integration of Python (and other languages) in LaTeX documents.  I am
+currently working on similar software that will initially focus on
+<a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc Markdown</a>.
+</p>
+<p>
+I use Python and LaTeX daily.  LaTeX is not just for writing&nbsp;&ndash; I
+have extensive experience with macro programming in LaTeX and plain TeX.
+Before I started using Python in 2010, I primarily worked with MATLAB, C++,
+and Perl.  At times, I have also used Bash, Fortran, HTML&nbsp;+ CSS,
+JavaScript, Julia, Mathematica, Octave, Ruby, and Rust.
+</p>
+<div class="hide-show">
+<input id="programming-software" class="hide-show-checkbox" type="checkbox">
+<p><label for="programming-software">
+<span class="hide">&#x27b8;</span>
+<span class="show">&#x27b7;</span>
+<u class="dotted">Software</u></label></p>
+<div class="show">
+<ul>
+<li><p>
+<a href="https://github.com/gpoore/pythontex">PythonTeX</a> allows Python code
+in LaTeX documents to be executed.  The results are included in the original
+document.  Unlike some similar software, PythonTeX is not a preprocessor.
+Code is passed to Python only after being processed by LaTeX.  As a result, it
+is possible to write LaTeX macros that internally run Python code.  PythonTeX
+also provides support for Ruby, Julia, Octave, Sage, Bash, and Rust.  This was
+my first real programming project both in Python and in LaTeX, starting in 2011.
+</p></li>
+<li><p>
+<a href="https://bespon.org/">BespON</a> is my experiment in creating a
+configuration language similar to <a href="http://yaml.org/">YAML</a> or
+<a href="https://github.com/toml-lang/toml">TOML</a>.  It is designed for
+lossless round-tripping:  a configuration file can be loaded, programatically
+modified, and then saved while retaining all original layout and comments.
+BespON provides concise syntax for deeply nested data structures and supports
+inheritance, aliases, and circular references.  The pure Python
+<a href="https://bespon.org/#benchmarks">performance</a> is surprisingly
+good&nbsp;&ndash; I haven't yet tried any serious optimizations.  I plan to
+use BespON in several upcoming projects.
+</p></li>
+<li><p>
+<a href="https://github.com/gpoore/unicodetools"> <code>unicodetools</code></a>
+is a library I wrote for working with the
+<a href="http://unicode.org/ucd/">Unicode Character Database</a>.  In creating
+BespON, I needed regular expressions based on code point properties, and
+wanted to use the latest version of Unicode even under older versions of
+Python.
+</p></li>
+</ul>
+</div>
+</div>
+
+<div class="hide-show">
+<input id="programming-publications" class="hide-show-checkbox" type="checkbox">
+<p><label for="programming-publications">
+<span class="hide">&#x27b8;</span>
+<span class="show">&#x27b7;</span>
+<u class="dotted">Publications</u></label></p>
+<div class="show">
+<ul>
+<li><p>
+"<a href="http://conference.scipy.org/proceedings/scipy2017/geoffrey_poore.html">BespON:
+Extensible config files with multiline strings, lossless round-tripping, and
+hex floats</a>," <cite>Proceedings of the 16th Python in Science
+Conference</cite>, 2017
+</p></li>
+<li><p>
+"<a href="http://iopscience.iop.org/article/10.1088/1749-4699/8/1/014010/meta">PythonTeX:
+reproducible documents with LaTeX, Python, and more</a>," <cite>Computational
+Science &amp; Discovery</cite>, 2015
+</p></li>
+</ul>
+</div>
+</div>
+
+
+<h2 id="typography">Typography</h2>
+<p>
+<a href="https://ctan.org/pkg/listings"><code>listings</code></a> and
+<a href="https://github.com/gpoore/minted"><code>minted</code></a> are the two
+major LaTeX packages for typesetting computer code with syntax highlighting.
+I have been maintaining and developing <code>minted</code> since 2013.
+<a href="https://github.com/gpoore/pythontex">PythonTeX</a> and
+<code>minted</code> both use <a href="http://pygments.org/">Pygments</a> for
+syntax highlighting, so there is some overlap.  I have made many improvements
+to <code>minted</code> (and PythonTeX) code typesetting.  Several of these are
+implemented in my
+<a href="https://github.com/gpoore/fvextra"><code>fvextra</code></a> LaTeX
+package.
+</p>
+
+<div class="hide-show">
+<input id="typography-fvextra-features" class="hide-show-checkbox" type="checkbox">
+<p><label for="typography-fvextra-features">
+<span class="hide">&#x27b8;</span>
+<span class="show">&#x27b7;</span>
+<u class="dotted"><code>fvextra</code></u></label></p>
+<div class="show">
+<ul>
+<li><p>
+<code>fvextra</code> builds on the existing <code>fancyvrb</code> package that
+is commonly used for working with verbatim text.  <code>minted</code> and
+PythonTeX can typeset code comments as LaTeX rather than as raw text.  This is
+particularly useful when comments contain LaTeX math.  <code>fvextra</code>
+fixes a number of existing issues with math embedded in a verbatim context, so
+that math within code can be typeset exactly like math anywhere else in a
+LaTeX document.  Other <code>fvextra</code> features include improved line
+numbering options and the ability to highlight individual lines of code or
+line ranges.
+</p></li>
+<li><p>
+The most important feature of <code>fvextra</code> is probably automatic line
+breaking for long lines of code, with automatic indentation to the correct
+level.  Previously, such line breaking was only available in the
+<code>listings</code> package.  <code>fvextra</code> provides fine-grained
+control over break locations:  breaks can be enabled anywhere, at spaces, or
+only before or after specified characters.  If breaks are allowed before or
+after a specified character, it is possible to group runs of identical
+characters.  Breaks can also be disabled within a programming language's
+tokens, so that for example there are not breaks in the middle of strings.
+I implemented line breaking in pure LaTeX and TeX; no Python is involved.
+</p></li>
+</ul>
+</div>
+</div>
+
+<div class="hide-show">
+<input id="typography-fvextra-publication" class="hide-show-checkbox" type="checkbox">
+<p><label for="typography-fvextra-publication">
+<span class="hide">&#x27b8;</span>
+<span class="show">&#x27b7;</span>
+<u class="dotted">Publication</u></label></p>
+<div class="show">
+<ul>
+<li><p>
+"<a href="https://tug.org/TUGboat/tb37-2/tb116poore.pdf">Advances in PythonTeX
+with an introduction to <code>fvextra</code></a>," <cite>TUGboat</cite>, 2016
+</p></li>
+</ul>
+</div>
+</div>
+
+
+<h2 id="physics">Physics</h2>
+<p>
+I teach undergraduate physics at all levels.  I frequently use
+<a href="https://github.com/gpoore/pythontex">PythonTeX</a> to generate
+randomized assignments for my students (typically with automatically generated
+solutions for me).
+<a href="https://github.com/gpoore/randassign/">RandAssign</a> is a Python
+package I created to automate this process.  I also incorporate Python
+programming in my upper-division classes, especially Mechanics and
+Mathematical Methods for Physics.  Programming exercises are common during
+class and as part of homework, typically using
+<a href="http://jupyter.org/">Jupyter notebooks</a>.
+</p>
+</main>
+
+<hr/>
+<div id="footer">
+<p></p>
+</div>
+
+</div>
+</body>
+</html>
