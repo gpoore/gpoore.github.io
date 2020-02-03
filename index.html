@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Geoffrey M. Poore</title>
 <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
@@ -105,7 +105,10 @@ ul.arrow li:before {
 <h2 id="programming">Programming</h2>
 <p>
 I create free and open-source software with scientific and technical
-applications.  One of my objectives is making it easier to write scientific
+applications.
+</p>
+<p>
+One of my objectives is making it easier to write scientific
 and technical documents.  I like to include executable code in my documents,
 so that things like plots and tables can be generated automatically.
 Documents can write themselves&nbsp;&ndash; at least in part.  You may be
@@ -113,19 +116,17 @@ familiar with this approach from software like
 <a href="http://jupyter.org/">Jupyter notebooks</a>,
 <a href="https://leisch.userweb.mwn.de/Sweave/">Sweave</a>,
 <a href="https://yihui.name/knitr/">knitr</a>, or
-<a href="https://orgmode.org/worg/org-contrib/babel/">Org-mode Babel</a>.  My
-own contribution is
-<a href="https://github.com/gpoore/pythontex">PythonTeX</a>, which focuses on
-superior integration of Python (and other languages) in LaTeX documents.  I am
-currently working on similar software that will initially focus on
-<a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc Markdown</a>.
+<a href="https://orgmode.org/worg/org-contrib/babel/">Org-mode Babel</a>.
+My own contributions are
+<a href="https://github.com/gpoore/codebraid">Codebraid</a> and
+<a href="https://github.com/gpoore/pythontex">PythonTeX</a>.
 </p>
 <p>
 I use Python and LaTeX daily.  LaTeX is not just for writing&nbsp;&ndash; I
 have extensive experience with macro programming in LaTeX and plain TeX.
 Before I started using Python in 2010, I primarily worked with MATLAB, C++,
-and Perl.  At times, I have also used Bash, Fortran, HTML&nbsp;+ CSS,
-JavaScript, Julia, Mathematica, Octave, Ruby, and Rust.
+and Perl.  At times, I have also used Bash, Fortran, Go, HTML&nbsp;+ CSS,
+JavaScript, Julia, Lua, Mathematica, Octave, R, Ruby, and Rust.
 </p>
 <div class="hide-show">
 <input id="programming-software" class="hide-show-checkbox" type="checkbox">
@@ -136,13 +137,24 @@ JavaScript, Julia, Mathematica, Octave, Ruby, and Rust.
 <div class="show">
 <ul>
 <li><p>
-<a href="https://github.com/gpoore/pythontex">PythonTeX</a> allows Python code
-in LaTeX documents to be executed.  The results are included in the original
-document.  Unlike some similar software, PythonTeX is not a preprocessor.
-Code is passed to Python only after being processed by LaTeX.  As a result, it
-is possible to write LaTeX macros that internally run Python code.  PythonTeX
-also provides support for Ruby, Julia, Octave, Sage, Bash, and Rust.  This was
-my first real programming project both in Python and in LaTeX, starting in 2011.
+<a href="https://github.com/gpoore/codebraid">Codebraid</a> makes inline code
+and code blocks executable in
+<a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc Markdown</a>.
+Codebraid documents are pure Pandoc Markdown; there is no custom syntax or
+Markdown extensions.  This allows everything Markdown-related to be handled by
+Pandoc.  Codebraid supports Bash, JavaScript, Julia, Python, R, and Rust.  It
+can also use Jupyter kernels, in which case rich output like plots, images,
+and LaTeX math are included automatically.
+</p></li>
+<li><p>
+<a href="https://github.com/gpoore/pythontex">PythonTeX</a> executes code in
+LaTeX documents and includes the results.  It supports Python plus Bash,
+JavaScript, Julia, Octave, Perl, R, Raku (Perl 6), Ruby, SageMath, and Rust.
+Unlike some similar software, PythonTeX is not a preprocessor.  Code is passed
+to Python only after being processed by LaTeX.  As a result, it is possible to
+write LaTeX macros that internally run Python or other code.  This was my
+first real programming experience with both Python and LaTeX, starting in
+2011.
 </p></li>
 <li><p>
 <a href="https://bespon.org/">BespON</a> is my experiment in creating a
@@ -161,7 +173,7 @@ use BespON in several upcoming projects.
 is a library I wrote for working with the
 <a href="http://unicode.org/ucd/">Unicode Character Database</a>.  In creating
 BespON, I needed regular expressions based on code point properties, and
-wanted to use the latest version of Unicode even under older versions of
+wanted to use a more recent version of Unicode even under older versions of
 Python.
 </p></li>
 </ul>
@@ -177,14 +189,19 @@ Python.
 <div class="show">
 <ul>
 <li><p>
-"<a href="http://conference.scipy.org/proceedings/scipy2017/geoffrey_poore.html">BespON:
+&ldquo;<a href="http://conference.scipy.org/proceedings/scipy2019/geoffrey_poore.html">Codebraid:
+Live Code in Pandoc Markdown</a>,&rdquo; <cite>Proceedings of the 18th Python in Science
+Conference</cite>, 2019
+</p></li>
+<li><p>
+&ldquo;<a href="http://conference.scipy.org/proceedings/scipy2017/geoffrey_poore.html">BespON:
 Extensible config files with multiline strings, lossless round-tripping, and
-hex floats</a>," <cite>Proceedings of the 16th Python in Science
+hex floats</a>,&rdquo; <cite>Proceedings of the 16th Python in Science
 Conference</cite>, 2017
 </p></li>
 <li><p>
-"<a href="http://iopscience.iop.org/article/10.1088/1749-4699/8/1/014010/meta">PythonTeX:
-reproducible documents with LaTeX, Python, and more</a>," <cite>Computational
+&ldquo;<a href="http://iopscience.iop.org/article/10.1088/1749-4699/8/1/014010/meta">PythonTeX:
+reproducible documents with LaTeX, Python, and more</a>,&rdquo; <cite>Computational
 Science &amp; Discovery</cite>, 2015
 </p></li>
 </ul>
@@ -216,15 +233,14 @@ package.
 <div class="show">
 <ul>
 <li><p>
-<code>fvextra</code> builds on the existing <code>fancyvrb</code> package that
-is commonly used for working with verbatim text.  <code>minted</code> and
-PythonTeX can typeset code comments as LaTeX rather than as raw text.  This is
-particularly useful when comments contain LaTeX math.  <code>fvextra</code>
-fixes a number of existing issues with math embedded in a verbatim context, so
-that math within code can be typeset exactly like math anywhere else in a
-LaTeX document.  Other <code>fvextra</code> features include improved line
-numbering options and the ability to highlight individual lines of code or
-line ranges.
+<code>fvextra</code> builds on the earlier
+<a href="https://ctan.org/pkg/fancyvrb"><code>fancyvrb</code></a>
+package that is commonly used for working with verbatim text.  It fixes a
+number of issues with LaTeX math embedded in a verbatim context, so that math
+within code comments can be typeset exactly like math anywhere else in a LaTeX
+document.  Other <code>fvextra</code>
+features include improved line numbering options and the ability to highlight
+individual lines of code or line ranges.
 </p></li>
 <li><p>
 The most important feature of <code>fvextra</code> is probably automatic line
@@ -236,7 +252,6 @@ only before or after specified characters.  If breaks are allowed before or
 after a specified character, it is possible to group runs of identical
 characters.  Breaks can also be disabled within a programming language's
 tokens, so that for example there are not breaks in the middle of strings.
-I implemented line breaking in pure LaTeX and TeX; no Python is involved.
 </p></li>
 </ul>
 </div>
@@ -251,8 +266,8 @@ I implemented line breaking in pure LaTeX and TeX; no Python is involved.
 <div class="show">
 <ul>
 <li><p>
-"<a href="https://tug.org/TUGboat/tb37-2/tb116poore.pdf">Advances in PythonTeX
-with an introduction to <code>fvextra</code></a>," <cite>TUGboat</cite>, 2016
+&ldquo;<a href="https://tug.org/TUGboat/tb37-2/tb116poore.pdf">Advances in PythonTeX
+with an introduction to <code>fvextra</code></a>,&rdquo; <cite>TUGboat</cite>, 2016
 </p></li>
 </ul>
 </div>
