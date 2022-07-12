@@ -114,11 +114,12 @@ so that things like plots and tables can be generated automatically.
 Documents can write themselves&nbsp;&ndash; at least in part.  You may be
 familiar with this approach from software like
 <a href="http://jupyter.org/">Jupyter notebooks</a>,
-<a href="https://leisch.userweb.mwn.de/Sweave/">Sweave</a>,
 <a href="https://yihui.name/knitr/">knitr</a>, or
 <a href="https://orgmode.org/worg/org-contrib/babel/">Org-mode Babel</a>.
 My own contributions are
-<a href="https://github.com/gpoore/codebraid">Codebraid</a> and
+<a href="https://github.com/gpoore/codebraid">Codebraid</a>
+(along with <a href="https://github.com/gpoore/codebraid-preview-vscode">Codebraid Preview</a>)
+and
 <a href="https://github.com/gpoore/pythontex">PythonTeX</a>.
 </p>
 <p>
@@ -126,7 +127,7 @@ I use Python and LaTeX daily.  LaTeX is not just for writing&nbsp;&ndash; I
 have extensive experience with macro programming in LaTeX and plain TeX.
 Before I started using Python in 2010, I primarily worked with MATLAB, C++,
 and Perl.  At times, I have also used Bash, Fortran, Go, HTML&nbsp;+ CSS,
-JavaScript, Julia, Lua, Mathematica, Octave, R, Ruby, and Rust.
+JavaScript, Julia, Lua, Mathematica, Octave, R, Ruby, Rust, and TypeScript.
 </p>
 <div class="hide-show">
 <input id="programming-software" class="hide-show-checkbox" type="checkbox">
@@ -147,6 +148,14 @@ can also use Jupyter kernels, in which case rich output like plots, images,
 and LaTeX math are included automatically.
 </p></li>
 <li><p>
+<a href="https://github.com/gpoore/codebraid-preview-vscode">Codebraid Preview</a>
+is a VS Code extension that provides a live Markdown preview generated with
+Pandoc.  Because the preview is generated with Pandoc itself, all Pandoc
+extensions to Markdown syntax are fully supported.  For a good overview, see
+the
+<a href="https://codebraid.org/presentations/scipy2022/">presentation for SciPy 2022</a>.
+</p></li>
+<li><p>
 <a href="https://github.com/gpoore/pythontex">PythonTeX</a> executes code in
 LaTeX documents and includes the results.  It supports Python plus Bash,
 JavaScript, Julia, Octave, Perl, R, Raku (Perl 6), Ruby, SageMath, and Rust.
@@ -165,8 +174,8 @@ modified, and then saved while retaining all original layout and comments.
 BespON provides concise syntax for deeply nested data structures and supports
 inheritance, aliases, and circular references.  The pure Python
 <a href="https://bespon.org/#benchmarks">performance</a> is surprisingly
-good&nbsp;&ndash; I haven't yet tried any serious optimizations.  I plan to
-use BespON in several upcoming projects.
+good&nbsp;&ndash; I haven't yet tried any serious optimizations.  BespON is
+currently used in Codebraid and some other projects.
 </p></li>
 <li><p>
 <a href="https://github.com/gpoore/unicodetools"> <code>unicodetools</code></a>
@@ -188,6 +197,11 @@ Python.
 <u class="dotted">Publications</u></label></p>
 <div class="show">
 <ul>
+<li><p>
+&ldquo;<a href="https://conference.scipy.org/proceedings/scipy2022/geoffrey_poore.html">Codebraid
+Preview for VS Code: Pandoc Markdown Preview with Jupyter Kernels</a>,&rdquo; <cite>Proceedings
+of the 21st Python in Science Conference</cite>, 2022
+</p></li>
 <li><p>
 &ldquo;<a href="http://conference.scipy.org/proceedings/scipy2019/geoffrey_poore.html">Codebraid:
 Live Code in Pandoc Markdown</a>,&rdquo; <cite>Proceedings of the 18th Python in Science
@@ -281,10 +295,12 @@ I teach undergraduate physics at all levels.  I frequently use
 randomized assignments for my students (typically with automatically generated
 solutions for me).
 <a href="https://github.com/gpoore/randassign/">RandAssign</a> is a Python
-package I created to automate this process.  I also incorporate Python
-programming in my upper-division classes, especially Mechanics and
-Mathematical Methods for Physics.  Programming exercises are common during
-class and as part of homework, typically using
+package I created to automate this process.  More recently, I created
+<a href="https://github.com/gpoore/text2qti">text2qti</a> for generating
+quizzes in QTI format.</p>
+<p>I also incorporate Python programming in my upper-division classes,
+especially Mechanics and Mathematical Methods for Physics.  Programming
+exercises are common during class and as part of homework, typically using
 <a href="http://jupyter.org/">Jupyter notebooks</a>.
 </p>
 </main>
